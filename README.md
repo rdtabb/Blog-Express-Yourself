@@ -1,4 +1,4 @@
-# Personal blog
+# Express Yourself. Personal blog
 This project is made using ReactJS and SASS. It utilizes React Router to create Personal blog with advanced functionality
 
 ## Functionality
