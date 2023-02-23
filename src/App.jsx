@@ -56,7 +56,7 @@ const App = () => {
   }
 
   const handleToggle = (e) => {
-    const button = document.querySelector('.button-three')
+    const button = document.querySelector('.header__toggle')
     const navigation = document.querySelector('.nav__list')
     const visibility = button.getAttribute('aria-expanded')
     if (visibility === 'true') {
