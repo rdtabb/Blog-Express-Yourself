@@ -1,7 +1,15 @@
+import { Link } from 'react-router-dom'
+
 const Footer = () => {
   return (
     <footer>
-        <h1>Footer</h1>
+        <nav>
+          <ul className="footer-nav__list">
+            <Link className='footer-nav__link' to='/'>Home</Link>
+            <Link className='footer-nav__link' to='/post'>Post</Link>
+            <Link className='footer-nav__link' to='/about'>About</Link>
+          </ul>
+        </nav>
     </footer>
   )
 }

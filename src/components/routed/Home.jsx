@@ -6,7 +6,7 @@ const Home = ({ posts }) => {
         {posts.length ? (
           <Feed posts={posts} />
         ) : (
-          <p>Your feed is empty</p>
+          <p className="home__empty">Your feed is empty! Go to the Post page to create the new Post!</p>
         )}
     </main>
   )

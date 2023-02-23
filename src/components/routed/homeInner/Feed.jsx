@@ -9,6 +9,7 @@ const Feed = ({posts}) => {
                     <div className="item__heading">
                         <h2 className="item__header">{post.title}</h2>
                         <p className="item__date">{post.datetime}</p>
+                        <img src="../../../public/icon-edit.png" alt="" />
                     </div>
                 </Link>
                 <p>{post.body}</p>

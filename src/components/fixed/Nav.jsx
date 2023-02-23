@@ -13,7 +13,7 @@ const Nav = ({search, setSearch}) => {
             onChange={(e) => setSearch(e.target.value)}
           />
         </form>
-        <ul className="nav__list">
+        <ul aria-expanded="false" className="nav__list">
           <li className="list-item">
             <Link className="nav__link" to="/">Home</Link>
           </li>

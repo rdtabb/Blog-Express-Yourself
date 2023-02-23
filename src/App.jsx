@@ -11,35 +11,10 @@ import About from "./components/routed/About";
 import PostPage from "./components/routed/PostPage";
 import NewPost from "./components/routed/NewPost";
 import Home from "./components/routed/Home";
+// Date formatting
 import { format } from 'date-fns'
 
 const App = () => {
-  // const [posts, setPosts] = useState([
-  //   {
-  //     id: 1,
-  //     title: "My First Post",
-  //     datetime: "July 01, 2021 11:17:36 AM",
-  //     body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequatur expedita, assumenda similique non optio! Modi nesciunt excepturi corrupti atque blanditiis quo nobis, non optio quae possimus illum exercitationem ipsa!"
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "My 2nd Post",
-  //     datetime: "July 01, 2021 11:17:36 AM",
-  //     body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequatur expedita, assumenda similique non optio! Modi nesciunt excepturi corrupti atque blanditiis quo nobis, non optio quae possimus illum exercitationem ipsa!"
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "My 3rd Post",
-  //     datetime: "July 01, 2021 11:17:36 AM",
-  //     body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequatur expedita, assumenda similique non optio! Modi nesciunt excepturi corrupti atque blanditiis quo nobis, non optio quae possimus illum exercitationem ipsa!"
-  //   },
-  //   {
-  //     id: 4,
-  //     title: "My Fourth Post",
-  //     datetime: "July 01, 2021 11:17:36 AM",
-  //     body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequatur expedita, assumenda similique non optio! Modi nesciunt excepturi corrupti atque blanditiis quo nobis, non optio quae possimus illum exercitationem ipsa!"
-  //   }
-  // ])
   const [posts, setPosts] = useState([])
   const [search, setSearch] = useState('')
   const [searchResult, setSearchResult] = useState([])
@@ -68,6 +43,8 @@ const App = () => {
     }
     console.log(post)
     const newPosts = [...posts, post]
+    setPostBody('')
+    setPostTitle('')
     setAndNavigate(newPosts)
   }
 
@@ -78,10 +55,25 @@ const App = () => {
     setAndNavigate(newList)
   }
 
+  const handleToggle = (e) => {
+    const button = document.querySelector('.button-three')
+    const navigation = document.querySelector('.nav__list')
+    const visibility = button.getAttribute('aria-expanded')
+    if (visibility === 'true') {
+      button.setAttribute('aria-expanded', 'false')
+      navigation.setAttribute('aria-expanded', 'false')
+    } else {
+      button.setAttribute('aria-expanded', 'true')
+      navigation.setAttribute('aria-expanded', 'true')
+    }
+  }
+
   return (
     <>
       <div className="container">
-        <Header />
+        <Header 
+          handleToggle={handleToggle}
+        />
         <Nav
           search={search}
           setSearch={setSearch}
