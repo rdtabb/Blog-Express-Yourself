@@ -35,6 +35,11 @@
     --z-500: 500;
 }
 
+::selection {
+    color: hsl(var(--clr-white));
+    background: var(--clr-bright-accent);
+}
+
 /* ----------------------------- */
 /* Light theme                   */
 /* ----------------------------- */
@@ -79,7 +84,7 @@ body #root {
     --padding: 1rem;
 
     width: min(var(--width), 100% - var(--padding) * 2);
-    height: 100vh;
+    min-height: 100vh;
     margin-inline: auto;
 }
 
@@ -124,7 +129,7 @@ body #root {
     z-index: var(--z-200);
 
     background: transparent;
-    border: 1.5px solid var(--button-color, #000);
+    border: 0 solid var(--button-color, #000);
     border-radius: .5rem;
     overflow: hidden;
     cursor: pointer;
@@ -324,6 +329,11 @@ body #root {
     margin-block: clamp(1rem, 5vw, 2rem);
 }
 
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
 .post__delete {
     width: fit-content;
     padding: .5rem 1.75rem;
@@ -337,6 +347,22 @@ body #root {
     &:hover {
         background-color: hsl(var(--clr-white));
         color: var(--clr-bright-accent);
+    }
+}
+
+.post__edit {
+    width: fit-content;
+    padding: .5rem 1.75rem;
+    background-color: hsl(var(--clr-white));
+    color: var(--clr-bright-accent);
+    border-radius: .25rem;
+    border: 1px solid var(--clr-bright-accent);
+    cursor: pointer;
+    transition: all 200ms ease-in;
+
+    &:hover {
+        background-color: var(--clr-bright-accent);
+        color: hsl(var(--clr-white));
     }
 }
 

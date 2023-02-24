@@ -1,0 +1,10 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Updated my birthday!",
+      "datetime": "February 24, 2023 2:02:07 PM",
+      "body": "Put/patch crud operations are really confusing, but what actually is going on in my opinion is that we delete previous post, and replace it with the new one. \n"
+    }
+  ]
+}

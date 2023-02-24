@@ -4,7 +4,7 @@ const Header = ({ handleToggle }) => {
       <h1 className="header__heading">
         Expressive
       </h1>
-      <button onClick={handleToggle} className="header__toggle" aria-controls="primary-navigation" aria-expanded="false">
+      <button onClick={handleToggle} className="header__toggle" aria-expanded="false">
         <svg stroke="var(--button-color)" fill="none" className="hamburger" viewBox="-10 -10 120 120" width="45">
           <path className="line" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70">
           </path>
