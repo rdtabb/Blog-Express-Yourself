@@ -35,9 +35,28 @@
     --z-500: 500;
 }
 
+/* ----------------------------- */
+/* Selection and scrollbar       */
+/* ----------------------------- */
+
 ::selection {
     color: hsl(var(--clr-white));
     background: var(--clr-bright-accent);
+}
+
+@media (min-width: 40rem) {
+    ::-webkit-scrollbar {
+        width: .5rem;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #0f0038;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: var(--clr-bright-accent);
+        border-radius: 100vmax;
+    }
 }
 
 /* ----------------------------- */
@@ -289,8 +308,8 @@ body #root {
 
 .item {
     display: grid;
-    gap: 2rem;
-    padding: clamp(1.5rem, 5vw, 3rem);
+    gap: clamp(0rem, 5vw, 2rem);
+    padding: clamp(1.5rem, 4vw, 3rem);
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(1.5rem);
     border-radius: .4rem;
@@ -364,6 +383,11 @@ body #root {
         background-color: var(--clr-bright-accent);
         color: hsl(var(--clr-white));
     }
+}
+
+.edit-post__body {
+    height: auto;
+    max-width: 100%;
 }
 
 /* ----------------------------- */

@@ -38,7 +38,7 @@ const EditPost = ({
                         <label className="body-label" htmlFor="new-post__body">Post</label>
                         <textarea 
                             id="new-post__body"
-                            className="new-post__body"
+                            className="new-post__body edit-post__body"
                             placeholder="Text of your post"
                             value={editBody}
                             onChange={(e) => setEditBody(e.target.value)}
