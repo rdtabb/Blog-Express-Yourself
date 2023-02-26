@@ -208,7 +208,7 @@ body #root {
 
     &__link {
         position: relative;
-        font-size: clamp(var(--fs-400), 4vw, var(--fs-500));
+        font-size: clamp(var(--fs-300), 4vw, var(--fs-500));
         color: var(--clr-white);
         text-decoration: none;
         transition: all 150ms ease-in;
@@ -264,7 +264,7 @@ body #root {
 
             height: 100vh;
             width: 60%;
-            padding: 9rem 5rem 0;
+            padding: 9rem clamp(2rem, 10vw, 5rem) 0;
 
             background-color: hsl(var(--clr-white), 0.05);
             backdrop-filter: blur(1rem);
@@ -493,4 +493,23 @@ body #root {
     }
 }
 
+/* ----------------------------- */
+/* About page                    */
+/* ----------------------------- */
 
+.about {
+    display: grid;
+    gap: 2rem;
+    margin-block: clamp(1rem, 5vw, 2rem);
+    max-width: 60ch;
+
+    &__header {
+        font-size: var(--fs-600);
+        font-weight: var(--fw-700);
+        line-height: 102%;
+    }
+
+    &__description {
+
+    }
+}

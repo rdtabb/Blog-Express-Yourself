@@ -1,4 +1,5 @@
-const Header = ({ handleToggle }) => {
+const Header = ( {handleToggle}) => {
+
   return (
     <header className="header">
       <h1 className="header__heading">

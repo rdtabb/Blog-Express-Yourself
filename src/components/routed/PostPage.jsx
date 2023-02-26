@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom"
 
-const PostPage = ({ posts, handleDelete }) => {
+const PostPage = ({posts, handleDelete}) => {
   const { id } = useParams()
   const post = posts
     .find(post => 

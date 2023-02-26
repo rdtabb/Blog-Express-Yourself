@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 
-const Nav = ({search, setSearch}) => {
+const Nav = ({ search, setSearch }) => {
+
   return (
     <nav className="nav">
         <form onSubmit={(e) => e.preventDefault()}>
@@ -18,7 +19,7 @@ const Nav = ({search, setSearch}) => {
             <Link className="nav__link" to="/">Home</Link>
           </li>
           <li className="list-item">
-            <Link className="nav__link" to="/post">Post</Link>
+            <Link className="nav__link" to="/post">New Post</Link>
           </li>
           <li className="list-item">
             <Link className="nav__link" to="/about">About</Link>
