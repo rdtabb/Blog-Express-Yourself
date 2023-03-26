@@ -17,7 +17,7 @@ const NewPost = ({
                 onChange={(e) => setPostTitle(e.target.value)}
               />
               <label className="body-label" htmlFor="new-post__body">Post</label>
-              <input 
+              <textarea 
                 type="textarea" 
                 id="new-post__body"
                 className="new-post__body"

@@ -125,6 +125,16 @@ body #root {
 	}
 }
 
+input, textarea {
+    transition: all 200ms ease-in;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border: 1px solid hsl(var(--clr-white));
+}
+
 /* ----------------------------- */
 /* Header component              */
 /* ----------------------------- */
@@ -208,7 +218,7 @@ body #root {
 
     &__link {
         position: relative;
-        font-size: clamp(var(--fs-300), 4vw, var(--fs-500));
+        font-size: clamp(var(--fs-300), 10vw, var(--fs-500));
         color: var(--clr-white);
         text-decoration: none;
         transition: all 150ms ease-in;
@@ -217,7 +227,7 @@ body #root {
     &__link::before {
         position: absolute;
         content: '';
-        top: 2rem;
+        top: 1.5rem;
         height: 3px;
         width: 100%;
         background-color: var(--clr-bright-accent);;
